@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+    </h:head>l
+    <h:body>
+        Hello from Facelets
+        <br />
+
+        <h:form>
+            <p:tieredMenu style="width:200px">
+                <p:submenu label="Autores" icon="ui-icon-person">
+                    <p:menuitem value="Listado" icon="ui-icon-print" outcome="/Vistas/autor/List"/>
+                    <p:menuitem value="Libros" icon="ui-icon-bookmark" outcome="/Vistas/libro/librosAutor"/>
+                    <p:menuitem value="Premios" icon="ui-icon-star" outcome="/Vistas/autor/autorPremios"/>
+                </p:submenu>
+
+                <p:submenu label="Libros" icon="ui-icon-bookmark">
+                    <p:menuitem value="Listado" icon="ui-icon-print" outcome="/Vistas/libro/List"/>
+                    <p:menuitem value="Premios" icon="ui-icon-star" outcome="/Vistas/libro/premioLibros"/>
+                </p:submenu>
+
+                <p:submenu label="Premios" icon="ui-icon-star">
+                    <p:menuitem value="Listado" icon="ui-icon-print" outcome="/Vistas/premio/List"/>
+                    <p:menuitem value="Premios por autor" icon="ui-icon-star" outcome="/Vistas/premio/PremiosAutor"/>
+                </p:submenu>
+
+                <p:submenu label="Paises" icon="globe">
+                    <p:menuitem value="Listado" icon="ui-icon-print" outcome="/Vistas/pais/List"/>
+                    <p:menuitem value="Autores y premios" icon="ui-icon-bookmark" outcome="/Vistas/pais/autorPremios"/>
+                </p:submenu>
+
+                <p:menuitem value="Quit" icon="pi pi-fw pi-power-off"/>
+            </p:tieredMenu>
+        </h:form>
+
+        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
+        <br />
+        <h:link outcome="/Vistas/autor/List" value="Show All Autor Items"/>
+        <br />
+        <h:link outcome="/Vistas/autorPremio/List" value="Show All AutorPremio Items"/>
+        <br />
+        <h:link outcome="/Vistas/libro/List" value="Show All Libro Items"/>
+        <br />
+        <h:link outcome="/Vistas/pais/List" value="Show All Pais Items"/>
+        <br />
+        <h:link outcome="/Vistas/premio/List" value="Show All Premio Items"/>
+    </h:body>
+
+
+
+
+
+</html>
+
